@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "debug": "cross-env NODE_OPTIONS='--inspect' next dev",
     "start": "next start",
     "lint": "next lint",
     "stylelint": "stylelint '**/*.{css,scss}' --fix"
@@ -20,11 +21,17 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^8.15.0",
     "@typescript-eslint/parser": "^8.15.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.0.3",
-    "postcss": "^8",
-    "stylelint-config-tailwindcss": "^0.0.7",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.49",
+    "stylelint": "^14.16.1",
+    "stylelint-config-css-modules": "^4.4.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5"
   }
 }
