@@ -6,7 +6,7 @@ export default function Home(): JSX.Element {
       <Head>
         <title>Create Next App2323</title>
       </Head>
-      Powered by{}
+      Popepepe
     </div>
   );
 }

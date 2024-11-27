@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+
+const notoSans = Noto_Sans({
+  weight: ["300", "400", "500", "700"],
+  style: ["normal"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "MyTop - top, top",
@@ -12,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ru" className={notoSans.className}>
       <body>{children}</body>
     </html>
   );
