@@ -1,38 +1,37 @@
 {
-  "name": "top-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "debug": "cross-env NODE_OPTIONS='--inspect' next dev",
-    "start": "next start",
-    "lint": "next lint",
-    "stylelint": "stylelint '**/*.{css,scss}' --fix"
-  },
-  "dependencies": {
-    "classnames": "^2.5.1",
-    "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^15.0.3",
-    "postcss": "^8.4.49",
-    "stylelint": "^14.16.1",
-    "stylelint-config-css-modules": "^4.4.0",
-    "stylelint-config-prettier": "^9.0.5",
-    "stylelint-config-standard": "^29.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.3.0",
-    "tailwindcss": "^3.4.15",
-    "typescript": "^5"
-  }
+	"name": "top-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"debug": "cross-env NODE_OPTIONS='--inspect' next dev",
+		"start": "next start",
+		"lint": "next lint",
+		"stylelint": "stylelint '**/*.{css,scss}' --fix"
+	},
+	"dependencies": {
+		"classnames": "^2.5.1",
+		"next": "15.0.3",
+		"react": "19.0.0-rc-66855b96-20241106",
+		"react-dom": "19.0.0-rc-66855b96-20241106"
+	},
+	"devDependencies": {
+		"@svgr/webpack": "^8.1.0",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@typescript-eslint/eslint-plugin": "^8.15.0",
+		"@typescript-eslint/parser": "^8.15.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^8.57.1",
+		"eslint-config-next": "^15.0.3",
+		"stylelint": "^14.16.1",
+		"stylelint-config-css-modules": "^4.4.0",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard": "^29.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-scss": "^4.3.0",
+		"typescript": "^5"
+	}
 }
