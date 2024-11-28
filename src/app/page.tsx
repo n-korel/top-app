@@ -1,12 +1,12 @@
-import Head from "next/head";
+import { Button } from './components/Button/Button';
+import { Htag } from './components/Htag/Htag';
 
 export default function Home(): JSX.Element {
-  return (
-    <div>
-      <Head>
-        <title>Create Next App2323</title>
-      </Head>
-      Popepepe
-    </div>
-  );
+	return (
+		<>
+			<Htag tag="h1">ХЕЕЙ</Htag>
+			<Button appearance="primary">Кнопка</Button>
+			<Button appearance="ghost">Кнопка</Button>
+		</>
+	);
 }
