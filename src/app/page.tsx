@@ -1,23 +1,20 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Button } from './components/Button/Button';
 import { Htag } from './components/Htag/Htag';
 import { P } from './components/P/P';
 import { Tag } from './components/Tag/Tag';
 import { Rating } from './components/Rating/Rating';
+import { withLayout } from './layout/Layout';
 
-export default function Home(): JSX.Element {
-	const [counter, setCounter] = useState<number>(0);
-
-	useEffect(() => {
-		console.log('Counter' + counter);
-	});
+function Home(): JSX.Element {
+	const [rating, setRating] = useState<number>(4);
 
 	return (
 		<>
-			<Htag tag="h1">{counter}</Htag>
-			<Button appearance="primary" arrow="right" onClick={() => setCounter((x) => x + 1)}>
+			<Htag tag="h1">Заголовок</Htag>
+			<Button appearance="primary" arrow="right">
 				Кнопка
 			</Button>
 			<Button appearance="ghost" arrow="down">
@@ -34,7 +31,9 @@ export default function Home(): JSX.Element {
 				Green
 			</Tag>
 			<Tag color="primary">Primary</Tag>
-			<Rating rating={4} />
+			<Rating rating={rating} isEditable setRating={setRating} />
 		</>
 	);
 }
+
+export default withLayout(Home);
