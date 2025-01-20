@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 };
 
 export const dynamic = 'force-static'; // Принудительная статическая генерация
+export const dynamicParams = true; // Разрешаем динамические пути (аналог fallback: true)
 export const revalidate = 3600; // Обновление каждый час, если нужно
 
 export default function RootLayout({
