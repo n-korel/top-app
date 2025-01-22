@@ -1,20 +1,39 @@
-import axios from 'axios';
-import { MenuItem } from './interfaces/menu.interface';
-import ClientPage from './components/client-page';
+'use client';
 
-// Функция получения данных на этапе сборки
-async function getData() {
-	const firstCategory = 0;
-	const { data: menu } = await axios.post<MenuItem[]>(
-		process.env.NEXT_PUBLIC_DOMAIN + 'api/top-page/find',
-		{ firstCategory },
+import { useState } from 'react';
+import { Button } from './components/Button/Button';
+import { Htag } from './components/Htag/Htag';
+import { P } from './components/P/P';
+import { Tag } from './components/Tag/Tag';
+import { Rating } from './components/Rating/Rating';
+import { withLayout } from './layout/Layout';
+
+function Home(): JSX.Element {
+	const [rating, setRating] = useState<number>(4);
+
+	return (
+		<>
+			<Htag tag="h1">Заголовок</Htag>
+			<Button appearance="primary" arrow="right">
+				Кнопка
+			</Button>
+			<Button appearance="ghost" arrow="down">
+				Кнопка
+			</Button>
+			<P size="l">Big</P>
+			<P>middle</P>
+			<P size="s">small</P>
+			<Tag size="s">Ghost</Tag>
+			<Tag size="m" color="red">
+				Red
+			</Tag>
+			<Tag size="s" color="green">
+				Green
+			</Tag>
+			<Tag color="primary">Primary</Tag>
+			<Rating rating={rating} isEditable setRating={setRating} />
+		</>
 	);
-	return { menu, firstCategory };
 }
 
-// Основной компонент страницы
-export default async function HomePage() {
-	const { menu, firstCategory } = await getData();
-
-	return <ClientPage menu={menu} firstCategory={firstCategory} />;
-}
+export default withLayout(Home);
