@@ -1,15 +1,16 @@
 :root {
-	--black: #3B434E;
-	--gray-light: #EBEBEB;
+	--black: #3b434e;
+	--gray-light: #ebebeb;
+	--gray-dark: #787d85;
 	--white: white;
-	--primary: #7653FC;
-	--primary-hover: #6344DF;
-	--red: #FC836D;
-	--green: #1DC37E;
-	--green-light: #C8F8E4;
+	--primary: #7653fc;
+	--primary-hover: #6344df;
+	--red: #fc836d;
+	--green: #1dc37e;
+	--green-light: #c8f8e4;
 }
 
 body {
-	background: #F5F6F8;
+	background: #f5f6f8;
 	color: var(--black);
 }

@@ -11,20 +11,7 @@ import { MenuItem } from './interfaces/menu.interface';
 import { withLayout } from './layout/Layout';
 
 function Home(): JSX.Element {
-	const [menu, setMenu] = useState<MenuItem[]>([]);
 	const firstCategory = 0;
-
-	useEffect(() => {
-		const fetchMenu = async () => {
-			const { data } = await axios.post<MenuItem[]>(
-				`${process.env.NEXT_PUBLIC_DOMAIN}api/top-page/find`,
-				{ firstCategory },
-			);
-			setMenu(data);
-		};
-
-		fetchMenu();
-	}, []);
 
 	return (
 		<>
@@ -47,11 +34,6 @@ function Home(): JSX.Element {
 			</Tag>
 			<Tag color="primary">Primary</Tag>
 			<Rating rating={4} isEditable setRating={() => {}} />
-			<ul>
-				{menu.map((m) => (
-					<li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-				))}
-			</ul>
 		</>
 	);
 }
